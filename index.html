@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Personnel</title>
+    <title>Portfolio_Mitia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">Jean Dupont</div>
+            <div class="logo">Mitia RAJESTON</div>
+            <div class="burger">&#9776;</div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#apropos">À propos</a></li>
@@ -21,42 +22,86 @@
 
     <section id="accueil" class="section accueil">
         <div class="content">
-            <h1>Bonjour, je suis <span>Jean Dupont</span></h1>
-            <p>Développeur Web & Designer UI/UX</p>
+            <h1>Bonjour, je suis <span>Mitia RAJESTON</span></h1>
+            <p>Administrateur Système et Réseau & Developpeur Web</p>
             <img src="images/Mitia.jpg" alt="Photo de profil">
         </div>
     </section>
 
     <section id="apropos" class="section">
         <h2>À propos de moi</h2>
-        <p>Je suis un passionné de développement web avec plus de 3 ans d'expérience. J'aime créer des sites modernes, performants et responsive. Mon objectif est de toujours livrer des projets avec efficacité, créativité et qualité.</p>
+        <p>	Je suis étudiant en  3ème année d’ Informatique, 
+            dans le parcours Administration  Système et Réseau à l’IFT.
+             Je me caractérise par mes fortes compétences en maintenance informatique 
+             et je possède à la fois des connaissances théorique et pratique qui me permettrons 
+             d’exécuter mes missions de manière  sûre  et efficace.
+        </p>
     </section>
 
     <section id="experience" class="section">
         <h2>Expérience</h2>
         <ul class="experience-list">
             <li>
-                <h3>Développeur Web - Freelance</h3>
-                <p>2022 - Présent</p>
-                <p>Création de sites vitrines, boutiques en ligne et applications web personnalisées.</p>
+                <h3>Administrateur Système et Réseau</h3>
+                <p>NEXUS-SARLU | 2025 - Présent</p>
+                <p> 
+                    J'ai pu participer à des projets de montage d'un parc informatique 
+                    d'entreprise de A à Z, en y contribuant dans la configuration des matériels
+                     informatiques ainsi qu'à la création des utilisateurs et à l'attribution des droits.
+                </p>
             </li>
             <li>
-                <h3>Stagiaire Front-End - WebTech</h3>
-                <p>2021</p>
-                <p>Développement d'interfaces utilisateur avec HTML, CSS et JavaScript.</p>
+                <h3>Stagiaire en ASR</h3>
+                <p>NEXUS-SARLU | Janvier 2025 - Mars 2025</p>
+                <p>En tant que responsable du parc informatique chez NEXUS-SARLU , je veille au bon fonctionnement
+                de nore infrastructure informatique, garantissant la stabilité de la connexion et identifiant les 
+                vulnérabilité de notre système.
+                </p>
+            </li>
+             <li>
+                <h3>Stagiaire en ASR</h3>
+                <p>FOUNDEVER | Septembre 2024</p>
+                <p>  J'ai pu participer à des projets de montage d'un parc informatique 
+                    d'entreprise de A à Z, en y contribuant dans la configuration des matériels
+                     informatiques ainsi qu'à la création des utilisateurs et à l'attribution des droits.</p>
+            </li>
+              <li>
+                <h3>Président des étudiants</h3>
+                <p>IFT  | 2023-2025</p>
+                    <p>  Durant le mandat de président des étudiants dans mon établissement,
+                        j'ai pu acquérir des compétences dans l'organisation d'évènements et
+                        de tâches interuniversitaires, tout en soutenant notre institut et 
+                        en renforçant les liens entre étudiants.
+                    </p>
             </li>
         </ul>
     </section>
 
     <section id="contact" class="section contact">
         <h2>Contact</h2>
-        <p>Email : jean.dupont@email.com</p>
-        <p>Téléphone : +33 6 12 34 56 78</p>
-        <p>Adresse : 123 Rue Exemple, Paris, France</p>
+        <p>Email : mitiarajeston@gmail.com</p>
+        <p>Téléphone : +261 34 57 766 01</p>
+        <p>Adresse : Toamasina 501</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Jean Dupont. Tous droits réservés.</p>
+        <p>😎 &copy;2025 Mitia RAJESTON. Tous droits réservés.</p>
     </footer>
 </body>
+<script>
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+     document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
 </html>

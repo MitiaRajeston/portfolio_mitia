@@ -11,7 +11,8 @@ body {
 }
 
 .navbar {
-    display: flex;
+    
+ display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
@@ -19,6 +20,11 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    /*Pour fixer la bar nav*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* un peu plus sombre pour lisibilité */
 }
 
 .logo {
@@ -45,10 +51,12 @@ body {
 }
 
 .section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
     text-align: center;
+    padding-top: 100px; /* Pour ne pas que le contenu passe sous la navbar */
+
 }
 
 .accueil .content {
@@ -57,6 +65,21 @@ body {
     align-items: center;
     animation: fadeIn 1.5s ease;
 }
+.experience-list li {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.experience-list li:hover {
+    transform: scale(1.03);
+    background: rgba(0, 188, 212, 0.1);
+}
+.contact {
+    background: linear-gradient(145deg, #1a2a3a, #0f2027);
+    padding: 60px 20px;
+    border-top: 2px solid #00bcd4;
+}
+
+
 
 .accueil h1 {
     font-size: 2.8rem;
@@ -73,7 +96,7 @@ body {
 }
 
 .accueil img {
-    width: 200px;
+    width: 250px;
     border-radius: 50%;
     border: 4px solid #00bcd4;
     box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
@@ -141,5 +164,33 @@ footer {
 
     .accueil img {
         width: 150px;
+    }
+}
+.burger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar {
+        align-items: flex-start;
     }
 }

@@ -22,7 +22,13 @@
 
     <section id="accueil" class="section accueil">
         <div class="content">
-            <h1>Bonjour, je suis <span>Mitia RAJESTON</span></h1>
+            <!--<h1 id="texte">Bonjour, je suis <span>Mitia RAJESTON</span></h1>-->
+            <!-- Texte complet caché -->
+            <div id="texte-complet">Bonjour, je suis <span>Mitia RAJESTON</span></div>
+
+            <!-- Élément où le texte s'affichera progressivement -->
+             <h1 id="effet"></h1>
+
             <p>Administrateur Système et Réseau & Developpeur Web</p>
             <img src="images/Mitia.jpg" alt="Photo de profil">
         </div>
@@ -88,20 +94,6 @@
         <p>😎 &copy;2025 Mitia RAJESTON. Tous droits réservés.</p>
     </footer>
 </body>
-<script>
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-     document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            target.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-</script>
+<script src="javascript.js"></script>
 
 </html>
